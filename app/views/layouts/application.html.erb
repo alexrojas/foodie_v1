@@ -21,20 +21,20 @@
   </head>
   <body>
 
-    <div class="navbar navbar-default navbar-static-top">
+    <div class="navbar navbar-default navbar-static-top title-color">
       <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <button type="button " class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Foode</a>
+        <a class="navbar-brand title-color" href="#" >Foode</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
 
-            <li><%= link_to "Link1", "/path1"  %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
+            <li><%= link_to "Restaurants", "/path1"  %></li>
+            <li><%= link_to "Address", "/path2"  %></li>
+            
           </ul>
           <ul class="nav navbar-right col-md-4">
 
@@ -45,7 +45,7 @@
             <li class="col-md-1"> </li>
             <li class="col-md-3 logout"><%= link_to('Logout', destroy_user_session_path, class: 'btn btn-xs btn-danger', title: 'Logout', :method => :delete) %></li>
             <% else %>
-            <li class="col-md-4 pull-right">
+            <li class="col-md-4 pull-right sign-in-button">
             <%= link_to('Sign In', new_user_session_path, class: 'btn btn-primary', title: 'Sign In') %>
             </li>
             <% end %>
