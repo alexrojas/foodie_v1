@@ -15,3 +15,13 @@
 </div>
 
 <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+
+
+<% @places.each do |place| %>
+
+<p>Name</p> <br>
+<%= place['name'] %>
+<br>
+<br>
+
+<% end %>
