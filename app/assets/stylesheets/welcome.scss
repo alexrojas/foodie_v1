@@ -3,11 +3,27 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .jumbotron {
   text-align: center;
-  // color: #fff
+  background-image: asset-url('welcome.jpg');
+  background-size: cover;
+  opacity: 0.9;
+  color: #fff;
+  height: 550px;
+  font-size:  30px
 }
-
+.box1{
+  margin-top: 130px;
+  background-color: rgba(10,0,0,.30);
+}
 .display-4 {
   font-weight: 1000;
   font-family: "Ubuntu";
   text-align: center;
 }
+
+.signup {
+  background-color: rgba(0,0,0,.5);
+
+}
+
+// .c-cover--magic .c-search {
+//     background-color: rgba(0,0,0,.3);
