@@ -16,10 +16,44 @@
 
 <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+              <div class="thumbnail">
+                <% @places.each do |place| %>
+                <!-- <img src="" alt="" class="img-responsive"> -->
+                <%= image_tag "#{place['images']}" %>
+                <% end %>
+                <div class="caption">
+                  <% @places.each do |place| %>
+                  <!-- <h4 class="pull-right">$700.99</h4> -->
+                  <h6 class="pull-right"><%= place['rating']%></h6>
+                  <h4><%= place['name']  %></h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                  <h6><%= place['rating'] %></h6>
+                  <h6><%= place['vicinity'].to_s %></h6>
+                  <% end %>
+                </div>
+                <div class="ratings">
+                  <p>
+                    <span class="glyphicon glyphicon-star"></span>
 
+                     (15 reviews)
+                  </p>
+                </div>
+                <div class="space-ten"></div>
+                <div class="btn-ground text-center">
+                    <button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i> Quick View</button>
+                </div>
+                <div class="space-ten"></div>
+              </div>
+            </div>
+
+    </div>
+</div>
+<h2>Name</h2> <br>
 <% @places.each do |place| %>
-
-<p>Name</p> <br>
 <%= place['name'] %>
 <br>
 <br>
